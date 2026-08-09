@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Keuangan — PT. AMF NUSANTARA GROUP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">PT. AMF NUSANTARA GROUP</div>
+        <ul class="nav-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="keuangan.html">Transaksi Keuangan</a></li>
+            <li><a href="laporan.html" class="active">Laporan</a></li>
+            <li><a href="#" id="btnLogout">Keluar</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h2>Laporan Keuangan Periode</h2>
+        <div class="form-card">
+            <div class="form-row">
+                <div class="input-group">
+                    <label>Dari Tanggal</label>
+                    <input type="date" id="tglAwal">
+                </div>
+                <div class="input-group">
+                    <label>Sampai Tanggal</label>
+                    <input type="date" id="tglAkhir">
+                </div>
+            </div>
+            <button class="btn-primary" onclick="buatLaporan()">Buat Laporan</button>
+            <button class="btn-secondary" onclick="cetakLaporan()">Cetak / PDF</button>
+        </div>
+
+        <div class="section" id="hasilLaporan" style="display:none;">
+            <h3>Laporan Keuangan PT. AMF NUSANTARA GROUP</h3>
+            <p id="periodeLaporan"></p>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Keterangan</th>
+                        <th>Pemasukan</th>
+                        <th>Pengeluaran</th>
+                    </tr>
+                </thead>
+                <tbody id="isiLaporan"></tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="2">JUMLAH TOTAL</th>
+                        <th id="lapTotalMasuk">Rp 0</th>
+                        <th id="lapTotalKeluar">Rp 0</th>
+                    </tr>
+                    <tr>
+                        <th colspan="3">SALDO</th>
+                        <th id="lapSaldo">Rp 0</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

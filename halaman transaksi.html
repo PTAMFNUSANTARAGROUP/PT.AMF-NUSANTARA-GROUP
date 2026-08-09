@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi Keuangan — PT. AMF NUSANTARA GROUP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">PT. AMF NUSANTARA GROUP</div>
+        <ul class="nav-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="keuangan.html" class="active">Transaksi Keuangan</a></li>
+            <li><a href="laporan.html">Laporan</a></li>
+            <li><a href="#" id="btnLogout">Keluar</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h2>Catat Transaksi Baru</h2>
+        <form id="formTransaksi" class="form-card">
+            <div class="form-row">
+                <div class="input-group">
+                    <label>Tanggal</label>
+                    <input type="date" id="tgl" required>
+                </div>
+                <div class="input-group">
+                    <label>Jenis</label>
+                    <select id="jenis" required>
+                        <option value="masuk">Pemasukan</option>
+                        <option value="keluar">Pengeluaran</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>Keterangan</label>
+                <input type="text" id="keterangan" required placeholder="Contoh: Penjualan, Gaji, Operasional dll">
+            </div>
+            <div class="input-group">
+                <label>Jumlah (Rp)</label>
+                <input type="number" id="jumlah" required min="0" step="1000">
+            </div>
+            <button type="submit" class="btn-primary">Simpan Transaksi</button>
+        </form>
+
+        <div class="section">
+            <h3>Daftar Semua Transaksi</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Tanggal</th>
+                        <th>Keterangan</th>
+                        <th>Jenis</th>
+                        <th>Jumlah</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelTransaksi"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

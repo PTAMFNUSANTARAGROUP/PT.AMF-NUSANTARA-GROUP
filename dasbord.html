@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — PT. AMF NUSANTARA GROUP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">PT. AMF NUSANTARA GROUP</div>
+        <ul class="nav-menu">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="keuangan.html">Transaksi Keuangan</a></li>
+            <li><a href="laporan.html">Laporan</a></li>
+            <li><a href="#" id="btnLogout">Keluar</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h2>Ringkasan Keuangan</h2>
+        <div class="cards-grid">
+            <div class="card income">
+                <h3>Total Pemasukan</h3>
+                <p class="amount" id="totalMasuk">Rp 0</p>
+            </div>
+            <div class="card expense">
+                <h3>Total Pengeluaran</h3>
+                <p class="amount" id="totalKeluar">Rp 0</p>
+            </div>
+            <div class="card balance">
+                <h3>Saldo Bersih</h3>
+                <p class="amount" id="saldo">Rp 0</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Transaksi Terbaru</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Keterangan</th>
+                        <th>Jenis</th>
+                        <th>Jumlah</th>
+                    </tr>
+                </thead>
+                <tbody id="daftarTransaksi"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
